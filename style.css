@@ -7,7 +7,6 @@
   --panel-ink: #eef1ee;
   --panel-muted: #b5c0c9;
   --link: #2f5877;
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   color-scheme: light;
@@ -55,7 +54,7 @@ a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; margin: 0; }
+h1, h2, h3 { font-family: var(--sans); font-weight: 600; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
 
 .label {
   font-family: var(--sans);
@@ -101,12 +100,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; ma
 }
 .panel .nav { color: var(--panel-ink); }
 .panel h1 {
-  font-size: clamp(44px, 5.4vw, 72px);
-  line-height: 1.02;
-  letter-spacing: -0.01em;
+  font-size: clamp(40px, 4.6vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 .intro { display: flex; flex-direction: column; gap: 20px; }
-.intro p { margin: 0; font-family: var(--serif); font-size: 24px; font-style: italic; line-height: 1.35; max-width: 20em; }
+.intro p { margin: 0; font-family: var(--sans); font-size: 24px; font-style: italic; line-height: 1.35; max-width: 20em; }
 .intro .role { font-family: var(--sans); font-style: normal; font-size: 15px; line-height: 1.55; color: var(--panel-muted); max-width: 38ch; }
 .panel a { color: var(--panel-ink); }
 
@@ -124,11 +123,11 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; ma
 
 .papers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
 .papers li { display: grid; gap: 2px; max-width: 64ch; }
-.papers .title { font-family: var(--serif); font-size: 19px; line-height: 1.35; }
+.papers .title { font-size: 17px; font-weight: 600; line-height: 1.4; }
 .papers .src { font-size: 14px; color: var(--muted); }
 
 .contact-line {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 22px;
 }
 .bullets { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 8px; max-width: 64ch; }
@@ -207,7 +206,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; ma
   width: 200px;
   height: 200px;
   object-fit: cover;
-  object-position: 80% 40%;
+  object-position: 20% 40%;
   border-radius: 2px;
   margin-bottom: 8px;
 }
@@ -238,10 +237,32 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; ma
   .print figcaption { transition: none; }
 }
 
-.links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .main .lead {
-  font-family: var(--serif);
-  font-size: 22px;
+  font-family: var(--sans);
+  font-size: 20px;
   line-height: 1.5;
   max-width: 34em;
 }
+
+.projects { display: grid; gap: 18px; }
+.projects > div { display: grid; gap: 4px; max-width: 72ch; }
+.cv .projects h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  margin: 0;
+}
+.projects p { margin: 0; }
+
+.social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.social a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.social a span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.social a:hover span { text-decoration-thickness: 2px; }
+.social svg { flex: none; }
+.icons-only { gap: 18px; margin-top: 4px; }
+.icons-only a { color: var(--panel-muted); }
+.icons-only a:hover { color: var(--panel-ink); }
+.icons-only svg { width: 20px; height: 20px; }
+.cv-head .social { margin-top: 4px; font-size: 15px; }
