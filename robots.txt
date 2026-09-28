@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coggal.github.io/sitemap.xml
