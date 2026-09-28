@@ -212,25 +212,23 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; ma
   margin-bottom: 8px;
 }
 
-/* CV portrait: small, printed like a 1980s snapshot */
+/* CV portrait, credit shown on hover */
 .print {
   position: relative;
-  width: 104px;
+  width: 112px;
   margin: 0 0 12px;
-  padding: 6px 6px 18px;
-  background: #f3efe6;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-  transform: rotate(-2deg);
 }
-.print img { display: block; width: 100%; height: auto; }
+.print img { display: block; width: 100%; height: auto; border-radius: 2px; }
 .print figcaption {
   position: absolute;
-  inset-inline: 6px;
-  bottom: 3px;
-  font-size: 9.5px;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 12px 6px 4px;
+  font-size: 10px;
   line-height: 1.3;
-  color: #6d665a;
-  text-align: center;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  border-radius: 0 0 2px 2px;
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.2s ease;
