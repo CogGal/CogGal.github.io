@@ -7,6 +7,7 @@
   --panel-ink: #eef1ee;
   --panel-muted: #b5c0c9;
   --link: #2f5877;
+  --frame: #141d27;
   --sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   color-scheme: light;
@@ -22,6 +23,7 @@
     --panel-ink: #e9ede9;
     --panel-muted: #9eabb6;
     --link: #9cc0dc;
+  --frame: #0c1117;
     color-scheme: dark;
   }
 }
@@ -34,6 +36,7 @@
   --panel-ink: #e9ede9;
   --panel-muted: #9eabb6;
   --link: #9cc0dc;
+  --frame: #0c1117;
   color-scheme: dark;
 }
 
@@ -203,8 +206,12 @@ h1, h2, h3 { font-family: var(--sans); font-weight: 600; letter-spacing: -0.015e
 
 .portrait {
   display: block;
+  box-sizing: content-box;
   width: 200px;
   height: 200px;
+  padding: 7px;
+  background: var(--frame);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
   object-fit: cover;
   object-position: 20% 40%;
   border-radius: 2px;
